@@ -1,100 +1,272 @@
-<head>
-    <style>
-        #main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #image {
+        padding: 26vh 0 0 0;
+    }
+
+    #search-box {
+        margin-top: 25px;
+        display: flex;
+
+        padding: 10px;
+        border: .75px;
+        border-style: solid;
+        border-color: lightgrey;
+        border-radius: 25px;
+        width: 75vw;
+        height: 25px;
+        align-content: center;
+    }
+
+    #magnify {
+        margin-top: 2px;
+        height: 20px;
+        width: 20px;
+        fill: grey;
+    }
+
+    #text-entry {
+        border: 0;
+        outline: none;
+        padding: 0 0 0 10px;
+        width: 490px;
+    }
+
+    #search-buttons-div {
+        padding: 30px 0 0 0;
+    }
+
+    .search-button {
+        background-color: f8f9fa;
+        min-width: 54px;
+        height: 36px;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: #3c4043;
+        padding: 0 16px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .search-button:hover {
+        border: 1px solid lightgrey;
+    }
+
+    #language {
+        margin-top: 22px;
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        text-decoration: none;
+    }
+
+    #language a {
+        text-decoration: none;
+        color: darkblue;
+        font: 13px Arial;
+    }
+
+    #language a:hover {
+        text-decoration: underline;
+    }
+
+    #header {
+        margin-top: 10px;
+        height: 45px;
+        display: flex;
+        position: absolute;
+        right: 0;
+        left: 0;
+        justify-content: right;
+
+    }
+
+    #google-apps {
+        margin-right: 14px;
+        align-self: center;
+
+        display: flex;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    #google-apps:hover {
+        background-color: #f2f2f2;
+        cursor: pointer;
+    }
+
+    #apps-svg {
+        height: 24px;
+        width: 24px;
+        display: block;
+        margin: auto;
+        fill: #696969;
+    }
+
+    #sign-in {
+        font: Roboto, RobotoDraft, Arial, sans-serif;
+        font-size: 13.5px;
+        height: 35px;
+        width: 95px;
+        background-color: #0078d4;
+        color: white;
+        border: 0;
+        border-radius: 7%;
+        align-self: center;
+        margin-right: 30px;
+        cursor: pointer;
+    }
+
+    #sign-in:hover {
+        background-color: #2b7de9;
+    }
+
+    .image-gmail-div {
+        font: 13px Arial;
+        margin-right: 10px;
+        align-self: center;
+        color: black;
+    }
+
+    .image-gmail-link {
+        margin-right: 10px;
+        align-self: center;
+        text-decoration: none;
+        color: black
+    }
+
+    .image-gmail-link:hover {
+        text-decoration: underline;
+    }
+
+
+
+
+    #footer2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: #f2f2f2;
+        padding: 0 20px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #f2f2f2;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0;
+    }
+
+    #footer1 {
+        display: flex;
+        position: relative;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: arial, sans-serif;
+        color: #70757a;
+        padding: 14px;
+        padding-left: 25px;
+        border-bottom: solid .5px lightgrey;
+    }
+
+    @media (max-width: 1200px) {
+        footer2 {
+            justify-content: space-evenly;
         }
+    }
 
-        #image {
-            padding: 26vh 0 0 0;
-        }
+    #footer-div-1 {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        #search-box {
-            margin-top: 25px;
-            display: flex;
-            padding: 10px;
-            border: .75px;
-            border-style: solid;
-            border-color: lightgrey;
-            border-radius: 25px;
-            width: 560px;
-            height: 25px;
-            align-content: center;
+    .footer-text {
+        padding: 14px;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: arial, sans-serif;
+        color: #70757a;
+    }
 
-        }
-
-        #magnify {
-            margin-top: 2px;
-            height: 20px;
-            width: 20px;
-            color: lightgrey;
-        }
-
-        #text-entry {
-            border: 0;
-            outline: none;
-            padding: 0 0 0 10px;
-            width: 490px;
-        }
-
-        #search-buttons-div {
-            padding: 30px 0 0 0;
-        }
-
-        .search-button {
-            background-color: f8f9fa;
-            min-width: 54px;
-            height: 36px;
-            font-family: arial, sans-serif;
-            font-size: 14px;
-            border: 1px solid transparent;
-            border-radius: 4px;
-            color: #3c4043;
-            padding: 0 16px;
-            margin: 0 5px;
-        }
-
-        .search-button:hover {
-            border: 1px solid lightgrey;
-        }
-    </style>
-</head>
-
-
+    #footer-div-2 {
+        display: flex;
+        align-items: center;
+    }
+</style>
 <html>
-<header>
-    <p>
 
-    </p>
-</header>
+<body>
+    <header id="header">
+        <div class="image-gmail-div"><a class="image-gmail-link" href="">Gmail</a></div>
+        <div class="image-gmail-div"><a class="image-gmail-link" href="">Images</a></div>
+        <div id="google-apps">
+            <svg id="apps-svg" focusable="false" viewBox="0 0 24 24">
+                <path
+                    d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                </path>
+            </svg>
+        </div>
 
-<main id="main">
-    <div id="image">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-            alt="The google logo">
-    </div>
-    <div id="search-box">
-        <svg id="magnify" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path
-                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-            </path>
-        </svg>
-        <input type="text" id="text-entry">
-    </div>
-    <div id="search-buttons-div">
-        <button class="search-button" type="submit">Google Search</button>
-        <button class="search-button" type="submit">I'm Feeling Lucky</button>
-    </div>
-    <div id="">
+        <button id="sign-in" type="submit">Sign In</button>
+    </header>
 
+    <main id="main">
+        <div id="image">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                alt="The google logo">
+        </div>
+        <div id="search-box">
+            <svg id="magnify" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                </path>
+            </svg>
+            <input type="text" id="text-entry">
+        </div>
+        <div id="search-buttons-div">
+            <button class="search-button" type="submit"> Google Search</button>
+            <button class="search-button" type="submit">I'm Feeling Lucky</button>
+        </div>
+        <div id="language">
+            Google offered in: <a href="">Maori</a>
+        </div>
 
-    </div>
+    </main>
+    <footer>
+        <div id="footer1">
+            New Zealand
+        </div>
 
-</main>
+        <div id="footer2">
+            <div id="footer-div-1">
+                <a class="footer-text" href="">About</a>
+                <a class="footer-text" href="">Advertising</a>
+                <a class="footer-text" href="">Business</a>
+                <a class="footer-text" href="">How Search works</a>
+            </div>
 
-
-<footer>
-</footer>
+            <div id="footer-div-2">
+                <a class="footer-text" href="">Privacy</a>
+                <a class="footer-text" href="">Terms</a>
+                <a class="footer-text" href="">Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
 
 </html>
