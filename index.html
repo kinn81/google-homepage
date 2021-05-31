@@ -17,15 +17,15 @@
     #search-box {
         margin-top: 25px;
         display: flex;
-
         padding: 10px;
         border: .75px;
         border-style: solid;
         border-color: lightgrey;
         border-radius: 25px;
-        width: 75vw;
         height: 25px;
         align-content: center;
+        max-width: 550px;
+        width: 75%;
     }
 
     #magnify {
@@ -39,7 +39,7 @@
         border: 0;
         outline: none;
         padding: 0 0 0 10px;
-        width: 490px;
+        width: inherit;
     }
 
     #search-buttons-div {
@@ -180,7 +180,7 @@
     }
 
     @media (max-width: 1200px) {
-        footer2 {
+        #footer2 {
             justify-content: space-evenly;
         }
     }
